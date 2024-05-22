@@ -22,5 +22,5 @@ launch an online video rental service in order to stay competitive.
 The data was analyzed using a relational database management system and PostgreSQL. 
 
 ##  Final delivery
-**Visualizations**: Check out the [Tableau Public dashboard]([https://public.tableau.com/app/profile/isom.winton/vizzes](https://public.tableau.com/app/profile/chenhao.ma/viz/3_10_ROCKBUSTERSTEALTHLLC/Dashboard1)) for interactive insights.  
+**Visualizations**: Check out the [Tableau Public dashboard](https://public.tableau.com/app/profile/chenhao.ma/viz/3_10_ROCKBUSTERSTEALTHLLC/Dashboard1) for interactive insights.  
 **Final Project PDF**: Find a detailed report in the [Final Project PDF](https://github.com/NEOMach0131/RockbusterAnalysis-SQL/blob/main/Data_Immersion-A3-EX3.10-TASK10_PPT.pdf)

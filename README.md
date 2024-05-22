@@ -17,6 +17,9 @@ launch an online video rental service in order to stay competitive.
 ● Where are customers with a high lifetime value based?
 
 ● Do sales figures vary between geographic regions?
+## Data
+Rockbuster Data Set -We’ll be using a data set that contains information about Rockbuster’s stores, staff, inventory, film categories, film names, film language, actors, customers, rental history, payment history, and addresses for stores, staff, and customers.
+You can refer to[Rockbuster Stealth LLC Data Dictionary] for detailed information.
 
 ## Tools
 The data was analyzed using a relational database management system and PostgreSQL. 

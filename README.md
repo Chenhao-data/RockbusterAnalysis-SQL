@@ -23,3 +23,4 @@ The data was analyzed using a relational database management system and PostgreS
 
 ##  Final delivery
 **Visualizations**: Check out the [Tableau Public dashboard](https://public.tableau.com/app/profile/isom.winton/vizzes) for interactive insights.  
+**Final Project PDF**: Find a detailed report in the [Final Project PDF](https://github.com/NEOMach0131/RockbusterAnalysis-SQL/blob/main/Data_Immersion-A3-EX3.10-TASK10_PPT.pdf)

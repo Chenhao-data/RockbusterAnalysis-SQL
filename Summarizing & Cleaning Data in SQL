@@ -1,0 +1,55 @@
+# Check for and clean dirty data
+## Non-uniform
+SELECT title, COUNT(*) FROM film GROUP BY title;
+SELECT release_year, COUNT(*) FROM film GROUP BY release_year;
+SELECT language_id, COUNT(*) FROM film GROUP BY language_id;
+SELECT rental_duration, COUNT(*) FROM film GROUP BY rental_duration;
+SELECT rental_rate, COUNT(*) FROM film GROUP BY rental_rate;
+SELECT length, COUNT(*) FROM film GROUP BY length;
+SELECT replacement_cost, COUNT(*) FROM film GROUP BY replacement_cost;
+SELECT rating, COUNT(*) FROM film GROUP BY rating;
+ 
+SELECT store_id, COUNT(*) FROM customer GROUP BY store_id;
+SELECT first_name, COUNT(*) FROM customer GROUP BY first_name;
+SELECT last_name, COUNT(*) FROM customer GROUP BY last_name;
+SELECT email, COUNT(*) FROM customer GROUP BY email;
+
+## Duplicate Data 
+SELECT DISTINCT title, release_year, language_id, rental_duration,rental_rate, length,
+replacement_cost,rating, COUNT(*) FROM film 
+GROUP BY title, release_year, language_id, rental_duration, rental_rate, length,
+replacement_cost,rating HAVING COUNT(*)>1
+ 
+SELECT DISTINCT store_id, first_name, last_name, email, address_id, COUNT(*) FROM customer
+GROUP BY store_id, first_name, last_name, email, address_id HAVING COUNT(*)>1;
+
+## Missing Data 
+SELECT DISTINCT film_id, title, description, release_year, language_id, rental_duration,
+rental_rate, length, replacement_cost,rating, special_features, fulltext FROM film 
+WHERE ( film_id IS NULL OR title IS NULL OR description IS NULL OR release_year IS NULL OR 
+language_id IS NULL OR rental_duration IS NULL OR rental_rate IS NULL OR length IS NULL 
+OR replacement_cost IS NULL OR rating IS NULL OR special_features IS NULL OR fulltext IS 
+NULL );
+SELECT customer_id, store_id, first_name, last_name, email, address_id, activebool, 
+create_date, active FROM customer 
+WHERE ( customer_id IS NULL OR store_id IS NULL OR first_name IS NULL OR last_name IS 
+NULL OR email IS NULL OR address_id IS NULL OR activebool IS NULL OR create_date IS 
+NULL OR active IS NULL );
+
+# Summarize your data
+## Numerical
+SELECT AVG(release_year) AS avg_release_year, MIN(release_year) AS min_release_year, 
+MAX(release_year) AS max_release_year,
+ AVG(rental_duration) AS avg_rental_duration, MIN(rental_duration) AS 
+min_rental_duration, MAX(rental_duration) AS max_rental_duration,
+ AVG(rental_rate) AS avg_rental_rate, MIN(rental_rate) AS min_rental_rate, 
+MAX(rental_rate) AS max_rental_rate,
+ AVG(replacement_cost) AS avg_replacement_cost, MIN(replacement_cost) AS 
+min_replacement_cost, MAX(replacement_cost) AS max_replacement_cost
+FROM film； 
+
+## Non-Numerical
+SELECT MODE() WITHIN GROUP(ORDER BY language_id) AS mode_language,
+ MODE() WITHIN GROUP(ORDER BY rating) AS mode_rating,
+ MODE() WITHIN GROUP(ORDER BY special_features) AS mode_special_features
+FROM film

@@ -19,7 +19,8 @@ launch an online video rental service in order to stay competitive.
 ● Do sales figures vary between geographic regions?
 ## Data
 Rockbuster Data Set -We’ll be using a data set that contains information about Rockbuster’s stores, staff, inventory, film categories, film names, film language, actors, customers, rental history, payment history, and addresses for stores, staff, and customers.
-You can refer to[Rockbuster Stealth LLC Data Dictionary] for detailed information.
+
+You can refer to[Rockbuster Stealth LLC Data Dictionary](https://github.com/NEOMach0131/RockbusterAnalysis-SQL/blob/main/Rockbuster%20Stealth%20LLC%20Data%20Dictionary.PDF) for detailed information.
 
 ## Tools
 The data was analyzed using a relational database management system and PostgreSQL. 
